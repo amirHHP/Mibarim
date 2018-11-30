@@ -1,6 +1,8 @@
+[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
+Mibarim developeted by Hamed lashkari (Head), Aria zad ebrahimi, Mohammad hossein khojaste.
+
 # Release Notes
 
-Mibarim developeted by Hamed lashkari (Head), Aria zad ebrahimi, Mohammad hossein khojaste.
 
 ### 2015-10-15
 
