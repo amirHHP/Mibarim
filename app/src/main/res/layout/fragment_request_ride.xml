@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bootstrapbutton="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ride_background">
+
+    <LinearLayout
+        android:id="@+id/ride_info_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_alignParentStart="true"
+        android:orientation="vertical">
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:id="@+id/fa_route_user_name"
+                style="@style/wrapping_fa_text"
+                app:bootstrapBrand="success"
+                app:fontAwesomeIcon="fa_user" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/table_text_selector" />
+        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:id="@+id/fa_time"
+                style="@style/wrapping_fa_text"
+                app:bootstrapBrand="success"
+                app:fontAwesomeIcon="fa_clock_o" />
+
+            <TextView
+                android:id="@+id/timing"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/table_text_selector" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ride_btn_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/request_ride_share"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/request_ride"
+                app:bootstrapBrand="success"
+                app:bootstrapSize="md"
+                app:roundedCorners="true"
+                app:buttonMode="regular"
+                app:showOutline="false" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/info_loading"
+        style="@style/ListSpinner"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp" />
+
+
+</RelativeLayout>

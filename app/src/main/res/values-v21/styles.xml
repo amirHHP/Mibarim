@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Bootstrap.Dark.Me" parent="Theme.Bootstrap.Dark.Custom">
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+        <item name="android:typeface">monospace</item>
+        <item name="android:textAppearance">@style/CustomTextAppearance</item>
+    </style>
+    <style name="CustomTextAppearance">
+        <item name="android:typeface">monospace</item>
+    </style>
+
+</resources>

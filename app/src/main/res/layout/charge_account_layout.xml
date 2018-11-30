@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:textDirection="rtl">
+
+    <include layout="@layout/toolbar_account_charge"/>
+
+    <View
+        android:id="@+id/empty_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true" />
+
+    <TextView
+        android:id="@+id/current_credit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="30dp"
+        android:gravity="center_horizontal"
+        android:textSize="25sp"
+        android:textColor="@color/text_black" />
+
+
+    <LinearLayout
+        android:id="@+id/charge_amount_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/enter_amount_footer"
+        android:layout_marginBottom="20dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="20dp"
+            android:gravity="bottom"
+            android:text="@string/toman"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/text_black" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:layout_weight="1"
+            android:textColorHint="@color/text_black">
+
+            <EditText
+                android:id="@+id/charge_amount"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/enter_amount"
+                android:inputType="number"
+                android:textAppearance="?android:textAppearanceLarge"
+                android:textColor="@color/text_black" />
+        </android.support.design.widget.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/clear_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="25dp"
+            android:contentDescription="clear_current_amount"
+            android:padding="2dp"
+            android:src="@drawable/clear_amount" />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/enter_amount_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button_group"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/enter_amount_footer"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/text_black" />
+
+    <LinearLayout
+        android:id="@+id/button_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/payment_button"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/amount1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@color/add_amount_button_color"
+            android:text="10000 تومان"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/amount2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/add_amount_button_color"
+            android:text="20000 تومان"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/amount3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/add_amount_button_color"
+            android:text="30000 تومان"
+            android:textColor="@color/white" />
+
+        <Button
+            android:id="@+id/amount4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:background="@color/add_amount_button_color"
+            android:text="40000 تومان"
+            android:textColor="@color/white" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/payment_button"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/primary_dark"
+        android:text="@string/payment"
+        android:textColor="@color/white" />
+
+</RelativeLayout>

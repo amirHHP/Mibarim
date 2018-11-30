@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:background="#33000000"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="20dp"
+        android:background="#F5F5F5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/label_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#26a69a"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/select_pricing"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/text" />
+
+
+        <LinearLayout
+            android:id="@+id/no_matter_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:id="@+id/fa_no_matter_icon"
+                style="@style/wrapping_fa_text"
+                android:layout_margin="15dp"
+                android:background="@drawable/roundedbutton"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                app:bootstrapBrand="warning"
+                app:fontAwesomeIcon="fa_child" />
+
+
+            <TextView
+                android:id="@+id/label_no_matter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="20dp"
+                android:paddingRight="0dp"
+                android:paddingTop="20dp"
+                android:text="@string/win_win"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:id="@+id/min_max_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:id="@+id/fa_min_max_icon"
+                style="@style/wrapping_fa_text"
+                android:layout_margin="15dp"
+                android:background="@drawable/roundedbutton"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                app:bootstrapBrand="warning"
+                app:fontAwesomeIcon="fa_money" />
+
+            <TextView
+                android:id="@+id/label_min_max"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="20dp"
+                android:paddingRight="0dp"
+                android:paddingTop="20dp"
+                android:text="@string/min_max_price"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/price_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:orientation="horizontal"
+                android:padding="20dp">
+
+
+                <EditText
+                    android:id="@+id/min_max_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="8"
+                    android:text="@string/rial"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/do_continue_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#26a69a"
+                android:gravity="center"
+                android:padding="7dp"
+                android:text="@string/do_continue"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/text"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:id="@+id/free_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="horizontal">
+
+            <com.beardedhen.androidbootstrap.AwesomeTextView
+                android:id="@+id/fa_free_icon"
+                style="@style/wrapping_fa_text"
+                android:layout_margin="15dp"
+                android:background="@drawable/roundedbutton"
+                android:minHeight="40dp"
+                android:minWidth="40dp"
+                app:bootstrapBrand="warning"
+                app:fontAwesomeIcon="fa_thumbs_o_up" />
+
+
+            <TextView
+                android:id="@+id/label_free"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:paddingBottom="20dp"
+                android:paddingRight="0dp"
+                android:paddingTop="20dp"
+                android:text="@string/free"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

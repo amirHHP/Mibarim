@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.mibarim.main"
+    android:versionCode="38"
+    android:versionName="@string/version">
+
+    <uses-sdk tools:overrideLibrary="android.support.test.uiautomator.v18" />
+
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>-->
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!--<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />-->
+    <!--<uses-permission android:name="android.permission.CAMERA" />-->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!--<uses-permission android:name="com.mibarim.main.permission.C2D_MESSAGE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.SEND" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />-->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:name=".BootstrapApplicationImpl"
+        android:icon="@mipmap/ic_circle_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Bootstrap.Dark.Me">
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ui.activities.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.MainCardActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".authenticator.TokenRefreshActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.MobileValidationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.SmsValidationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.InviteActivity"
+            android:label="@string/invite_friends"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.PayActivity"
+            android:label="@string/book_trip"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.HelpActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.MobileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.RidingActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.UserProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.ChargeAccountActivity"
+            android:label="@string/charge_account"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activities.RatingActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activities.MainExpandableAnimatedListActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activities.SearchStationActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+
+
+        <activity
+            android:name=".ui.activities.StationsOnMapActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+
+        <receiver android:name=".BootCompletedIntentReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".authenticator.AccountAuthenticatorService"
+            android:process=":auth">
+            <intent-filter>
+                <action android:name="android.accounts.AccountAuthenticator" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accounts.AccountAuthenticator"
+                android:resource="@xml/authenticator" />
+        </service>
+
+        <activity
+            android:name=".authenticator.AuthenticatorActivity"
+            android:excludeFromRecents="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppFullScreenTheme">
+
+            <!--
+                No intent-filter here! This activity is only ever launched by
+                someone who explicitly knows the class name
+            -->
+        </activity>
+        <activity
+            android:name=".ui.activities.RegisterActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppFullScreenTheme" />
+        <activity
+            android:name=".ui.activities.WebViewActivity"
+            android:label=""
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.activities.worker.workerServiceActivity"/>
+        <receiver
+            android:name="com.google.android.gms.gcm.GcmReceiver"
+            android:exported="true"
+            android:permission="com.google.android.c2dm.permission.SEND">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+
+                <category android:name="com.mibarim.main" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".google.MyGcmListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </service>-->
+        <service android:name=".services.HelloService" />
+        <service
+            android:name=".google.MyInstanceIDListenerService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.android.gms.iid.InstanceID" />
+            </intent-filter>
+        </service>
+        <service android:name=".locationServices.LocationService" />
+        <service android:name=".locationServices.GoogleLocationService" />
+        <service android:name=".locationServices.LocationSender" />
+
+        <!-- Replace with your Fabric Crashlytics key from Fabric.io -->
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="008bf8a4616494c8a4d4458210e653861643203a" />
+
+        <activity
+            android:name=".ui.activities.UserInfoDetailActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" /> <!-- optional (needed if default theme has no action bar) -->
+
+    </application>
+
+
+</manifest>

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/root_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:background="#e9e9e9"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical">
+
+
+        <include layout="@layout/list_of_stations" />
+
+        <LinearLayout
+            android:id="@+id/search_boxes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+
+            <LinearLayout
+                android:id="@+id/source_search_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:background="#868686"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/source_search_edittext"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="7dp"
+                    android:background="#ffffff"
+                    android:singleLine="true"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/source_textview"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="#e9aeae"
+                android:gravity="center"
+                android:text="مبدا"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/destination_textview"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:background="#e9aeae"
+                android:gravity="center"
+                android:text="مقصد"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+
+            <!--<LinearLayout-->
+            <!--android:layout_alignParentTop="true"-->
+            <!--android:id="@+id/destination_search_layout"-->
+            <!--android:visibility="visible"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="#6effc3"-->
+            <!--android:orientation="horizontal"-->
+            <!--&gt;-->
+            <!--<EditText-->
+            <!--android:id="@+id/search_box"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="40dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:layout_margin="7dp"-->
+            <!--android:background="#ffffff"-->
+            <!--android:singleLine="true"-->
+            <!--android:textColor="#000" />-->
+            <!--</LinearLayout>-->
+        </LinearLayout>
+
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:background="@drawable/search_edittext_background">
+
+                    <EditText
+                        android:id="@+id/search_edittext"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="6dp"
+                        android:layout_marginEnd="25dp"
+                        android:layout_toStartOf="@+id/refresh_imageview"
+                        android:background="#ffffff"
+
+                        android:hint="جست و جوی مبدا"
+                        android:padding="3dp"
+                        android:textColor="@android:color/black"
+                        android:textColorHint="#515151" />
+
+                    <ImageView
+                        android:id="@+id/refresh_imageview"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="14dp"
+                        android:src="@drawable/ic_refresh_icon" />
+
+                </RelativeLayout>
+
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+        <!--<android.support.v4.widget.NestedScrollView
+            android:id="@+id/bottom_sheet1"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@android:color/holo_blue_bright"
+            android:clipToPadding="true"
+            app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="مبدا"
+                    android:textAllCaps="true"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="16dp"
+                    android:text="long_latin"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>-->
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <FrameLayout
+        android:id="@+id/substation_card_fragment_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</RelativeLayout>

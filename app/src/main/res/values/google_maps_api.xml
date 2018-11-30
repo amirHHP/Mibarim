@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--release key-->
+    <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false"></string>
+    <string name="google_maps_key_2" translatable="false" templateMergeStrategy="preserve"></string>
+    <!--debug key-->
+</resources>

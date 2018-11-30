@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/search_box"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/discount_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/discount_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="45dp"
+            android:background="@color/darker_gray"
+            android:focusable="true"
+            android:maxLines="1"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:hint="@string/discount_code"
+            android:singleLine="true"
+            android:textSize="14dp" />
+
+        <com.beardedhen.androidbootstrap.BootstrapButton
+            android:id="@+id/discount_btn"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="40dp"
+            android:text="@string/do_discount"
+            app:bootstrapBrand="success"
+            app:bootstrapSize="md"
+            app:buttonMode="regular"
+            app:showOutline="false" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/discount_list"
+        android:name="com.mibarim.main.ui.fragments.userInfoFragments.DiscountListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/discount_form" />
+
+
+</RelativeLayout>

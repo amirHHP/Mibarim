@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lists_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/search_boxes"
+    android:animateLayoutChanges="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".ui.activities.SearchStationActivity"
+    tools:showIn="@layout/activity_search_station">
+
+
+    <!--<ListView
+        android:id="@+id/choose_from_map_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="#86aaf4" />-->
+
+    <Button
+        android:elevation="20dp"
+        android:text="انتخاب از نقشه"
+        android:background="@color/defining_route_origin_color"
+        android:id="@+id/choose_from_map_button"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/white"
+        android:layout_marginRight="6dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+    <ListView
+        android:id="@+id/main_stations_listview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/choose_from_map_button"
+        android:layout_margin="10dp"
+        android:background="#ffffff" />
+
+    <!--<ListView
+        android:id="@+id/list2"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_stations_listview"
+        android:layout_margin="10dp"
+        android:background="#c7c7c7">
+
+    </ListView>-->
+
+
+</RelativeLayout>

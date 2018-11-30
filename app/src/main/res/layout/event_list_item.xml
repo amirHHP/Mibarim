@@ -1,0 +1,156 @@
+<?xml version="10.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:AwesomeTextView="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ListItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/event_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/table_text_selector" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/fa_name"
+            style="@style/wrapping_fa_text"
+            app:bootstrapBrand="success"
+            app:fontAwesomeIcon="fa_calendar" />
+
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/event_location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/table_text_selector" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/fa_location"
+            style="@style/wrapping_fa_text"
+            app:bootstrapBrand="success"
+            app:fontAwesomeIcon="fa_location_arrow" />
+
+    </LinearLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/event_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/table_text_selector" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/fa_time"
+            style="@style/wrapping_fa_text"
+            app:bootstrapBrand="success"
+            app:fontAwesomeIcon="fa_clock_o" />
+
+    </LinearLayout>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/event_conductor"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/table_text_selector" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/fa_conductor"
+            style="@style/wrapping_fa_text"
+            app:bootstrapBrand="success"
+            app:fontAwesomeIcon="fa_user" />
+
+    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/event_link"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:autoLink="web"
+            android:text="@string/external_link"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/table_text_selector" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/fa_link"
+            style="@style/wrapping_fa_text"
+            app:bootstrapBrand="success"
+            app:fontAwesomeIcon="fa_link" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/event_desc"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/table_text_selector" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/fa_desc"
+            style="@style/wrapping_fa_text"
+            app:bootstrapBrand="success"
+            app:fontAwesomeIcon="fa_info" />
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_avatar"-->
+    <!--style="@style/AvatarLarge"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_marginRight="100dp"-->
+    <!--android:contentDescription="@string/avatar" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_name"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+    <!--android:textColor="@color/table_text_selector" />-->
+
+</LinearLayout>

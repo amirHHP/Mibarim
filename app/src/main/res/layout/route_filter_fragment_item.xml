@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="15dp"
+    android:orientation="vertical">
+    <!-- A CardView that contains a TextView -->
+    <android.support.v7.widget.CardView
+
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        app:cardPreventCornerOverlap="false"
+        card_view:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="24dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="16dp"
+                android:paddingStart="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/minute_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="- - "
+                        android:textColor="@color/main_black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=":"
+                        android:textColor="@color/main_black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/hour_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" - -"
+                        android:textColor="@color/main_black"
+                        android:textSize="18sp" />
+
+
+
+                </LinearLayout>
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:visibility="gone"
+                    android:id="@+id/waiting_animation_item"
+                    android:layout_alignParentEnd="true"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="loading.json"
+                    app:lottie_loop="true" />
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/seats"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/table_text_selector"
+                        android:textSize="14sp" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <!--                    <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/go_to_map"
+                                            android:id="@+id/goToMap"/>-->
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingEnd="16dp"
+                        android:paddingStart="16dp"
+                        android:paddingTop="8dp">
+
+                        <!--<Button-->
+                        <!--android:id="@+id/src_station"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:paddingEnd="3dp"-->
+                        <!--android:paddingStart="3dp"-->
+                        <!--android:layout_alignParentStart="true"-->
+                        <!--android:text="@string/text_station"-->
+                        <!--android:textColor="@color/table_text_selector"-->
+                        <!--android:textSize="10sp" />-->
+
+                        <ImageView
+                            android:id="@+id/src_station"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:src="@drawable/radiobox_gray" />
+
+                        <TextView
+                            android:id="@+id/source_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/src_station"
+                            android:paddingEnd="8dp"
+                            android:paddingStart="8dp"
+                            android:textColor="@color/main_black"
+                            android:textSize="14sp" />
+
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/dots"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="3dp"
+                        android:paddingEnd="16dp"
+                        android:paddingStart="16dp"
+                        android:src="@drawable/dots_gray" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp"
+                    android:paddingTop="5dp">
+
+
+                    <!--<Button-->
+                    <!--android:id="@+id/st_destination"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentStart="true"-->
+                    <!--android:paddingEnd="3dp"-->
+                    <!--android:paddingStart="3dp"-->
+                    <!--android:text="@string/st_destination"-->
+                    <!--android:textColor="@color/table_text_selector"-->
+                    <!--android:textSize="10sp" />-->
+
+                    <ImageView
+                        android:id="@+id/st_destination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="7dp"
+                        android:src="@drawable/destination_gray" />
+
+
+                    <TextView
+                        android:id="@+id/destination_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/st_destination"
+                        android:paddingEnd="8dp"
+                        android:paddingStart="8dp"
+                        android:textColor="@color/main_black"
+                        android:textSize="14sp" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/car_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingEnd="16dp"
+                    android:paddingStart="16dp">
+
+                    <TextView
+                        android:id="@+id/carString"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/table_text_selector" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@color/primary"
+                android:orientation="horizontal">
+
+
+                <!--<com.airbnb.lottie.LottieAnimationView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    app:lottie_autoPlay="true"
+                    app:lottie_fileName="loading.json"
+                    app:lottie_loop="true" />-->
+
+                <Button
+                    android:id="@+id/suggest_time"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="@string/request_trip"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+
+                <View
+                    android:layout_width="2dp"
+                    android:layout_height="fill_parent"
+                    android:background="@android:color/white" />
+
+                <RelativeLayout
+                    android:id="@+id/delete_route"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/delete_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/delete" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+
+            <!--<android.support.v7.widget.AppCompatButton
+                android:id="@+id/show_trip"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/button_background_states"
+                android:elevation="5dp"
+                android:padding="8dp"
+                android:text="@string/show_trip"
+                android:textColor="@color/text"
+                android:textStyle="bold" />-->
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

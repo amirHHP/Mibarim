@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="24dp"
+    android:paddingStart="24dp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrollView4"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/weekly_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/saturday_chbx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/saturday"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:buttonTint="@color/primary_text" />
+
+
+                        <TextView
+                            android:id="@+id/time_saturday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="@string/two_dot"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/primary_text" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/sunday_chbx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/sunday"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:buttonTint="@color/primary_text" />
+
+
+                        <TextView
+                            android:id="@+id/time_sunday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="@string/two_dot"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/text_light" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/monday_chbx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/monday"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:buttonTint="@color/primary_text" />
+
+
+                        <TextView
+                            android:id="@+id/time_monday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="@string/two_dot"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/text_light" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/darker_gray" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/tuesday_chbx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/tuesday"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:buttonTint="@color/primary_text" />
+
+                        <TextView
+                            android:id="@+id/time_tuesday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="@string/two_dot"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/text_light" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/darker_gray" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/wednesday_chbx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/wednesday"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:buttonTint="@color/primary_text" />
+
+                        <TextView
+                            android:id="@+id/time_wednesday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="@string/two_dot"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/text_light" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/darker_gray" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/thursday_chbx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/thursday"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:buttonTint="@color/primary_text" />
+
+                        <TextView
+                            android:id="@+id/time_thursday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="@string/two_dot"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/text_light" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="200dp"
+                        android:layout_height="1dp"
+                        android:layout_gravity="center"
+                        android:background="@android:color/darker_gray" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="15dp"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginRight="60dp"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/friday_chbx"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:text="@string/friday"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:buttonTint="@color/primary_text" />
+
+                        <TextView
+                            android:id="@+id/time_friday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:hint="@string/two_dot"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="@color/text_light" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</RelativeLayout>

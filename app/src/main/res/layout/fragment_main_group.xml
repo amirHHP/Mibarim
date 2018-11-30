@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/group_route_fragment"
+            android:name="com.mibarim.main.ui.fragments.routeFragments.SuggestRouteListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <FrameLayout
+            android:id="@+id/check_route_fragment"
+            android:name="com.mibarim.main.ui.fragments.routeFragments.CheckSuggestListFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/check_button_fragment"
+            android:name="com.mibarim.main.ui.fragments.CheckButtonFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_check_buttons" />
+
+
+        <FrameLayout
+            android:id="@+id/suggest_group_button_fragment"
+            android:name="com.mibarim.main.ui.fragments.SuggestGroupButtonFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_suggest_group_buttons" />
+
+        <FrameLayout
+            android:id="@+id/suggest_route_button_fragment"
+            android:name="com.mibarim.main.ui.fragments.SuggestRouteButtonFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_suggest_route_buttons" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/map_fragment"
+        android:name="com.mibarim.main.ui.fragments.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        tools:layout="@layout/fragment_map" />
+
+</LinearLayout>

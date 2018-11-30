@@ -1,0 +1,306 @@
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+        maven { url 'https://maven.fabric.io/public' }
+        mavenLocal()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'io.fabric.tools:gradle:1.20.1'
+        classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
+        classpath 'com.google.gms:google-services:3.0.0'
+    }
+}
+
+plugins {
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin' version '0.5.0'
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+
+repositories {
+    maven { url 'https://github.com/donnfelker/mvn-repo/raw/master/' }
+    mavenLocal()
+    jcenter()
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url 'https://maven.google.com' }
+}
+
+//def computeVersionCode() {
+//
+////    if (System.env.BUILD_NUMBER) {              // Check if there is a system build number.
+////        return "$System.env.BUILD_NUMBER".toInteger()
+////    } else if (System.env.CIRCLE_BUILD_NUM) {   // Check to see if this is built on circle CI
+////        return "$System.env.CIRCLE_BUILD_NUM".toInteger()
+////    } else {
+//        return 1                                // if none is found, default to 1.
+//    //}
+//}
+//
+//def computeVersionName() {
+//    return "0." + computeVersionCode()
+//}
+
+//noinspection GroovyUnusedAssignment
+def gitSha = 'git rev-parse --short HEAD'.execute([], project.rootDir).text.trim()
+
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        minSdkVersion 17
+        targetSdkVersion 25
+        versionName "4.0.0"
+
+//        versionCode computeVersionCode()
+//        versionName computeVersionName()
+
+        // Enable this if you want to use Build.GIT_SHA in your code somewhere.
+        // This will give you the last GIT_SHA that was committed
+        // buildConfigField "String", "GIT_SHA", "\"${gitSha}\""
+
+        manifestPlaceholders = [
+                fabricCrashlyticsApiKey: "008bf8a4616494c8a4d4458210e653861643203a"   // Set this in your ~/.gradle/gradle.properties as: crashlyticsApiKey or use "$System.env.CRASHLYTICS_API_KEY"  to use a env variable (and then set that value, of course)
+        ]
+
+        //testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        applicationId "com.mibarim.main"
+        // Enabling multidex support.
+//        multiDexEnabled true
+        // Stops the Gradle plugin's automatic rasterization of vectors
+        //generatedDensities = []
+        //vectorDrawables.useSupportLibrary = true
+
+        manifestPlaceholders = [onesignal_app_id: "e9f04afc-b00a-43d6-a73d-5e4863effd6a",
+                                // Project number pulled from dashboard, local value is ignored.
+                                onesignal_google_project_number: "REMOTE"]
+
+    }
+
+    aaptOptions {
+        additionalParameters "--no-version-vectors"
+    }
+
+    packagingOptions {
+        // Exclude file to avoid
+        // Error: Duplicate files during packaging of APK
+        exclude 'META-INF/services/javax.annotation.processing.Processor'
+        exclude 'LICENSE.txt'
+    }
+
+    signingConfigs {
+        // Uncomment and set values and then this will work
+//         release {
+//             storeFile file(System.getenv('ANDROID_KEYSTORE_PATH'))
+//             storePassword System.getenv('ANDROID_STORE_PASS')
+//             keyAlias System.getenv('ANDROID_KEY_ALIAS')
+//             keyPassword System.getenv('ANDROID_KEY_PASS')
+//         }
+        saber {
+            keyAlias 'jaber'
+            keyPassword 'saberjabermamadasghar'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+    dexOptions {
+        jumboMode true
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix '.debug'
+            minifyEnabled false
+            // zipAlign false // this is default for debug
+        }
+        release {
+            minifyEnabled true
+            proguardFile '../proguard.cfg'
+//             signingConfig signingConfigs.release
+            zipAlignEnabled true // this is default for release
+//            testPackageName 'com.mibarim.main.tests'
+//            testInstrumentationRunner 'android.test.InstrumentationTestRunner'
+            // this is the default
+        }
+    }
+    productFlavors {
+        mibarim {
+            resValue "string", "update_link", "http://mibarimapp.com/androidapp/download/"
+        }
+        cafeBazar {
+            resValue "string", "update_link", "https://cafebazaar.ir/app/com.mibarim.main/?l=fa"
+        }
+        myket {
+            resValue "string", "update_link", "https://myket.ir/app/com.mibarim.main"
+        }
+        iranapps {
+            resValue "string", "update_link", "http://iranapps.com/app/com.mibarim.main"
+        }
+        avvalmarket {
+            resValue "string", "update_link", "http://mibarim.ir/androidapp/download/"
+        }
+        parshub{
+            resValue "string", "update_link", "http://mibarim.ir/androidapp/download/"
+        }
+        cando{
+            resValue "string", "update_link", "http://mibarim.ir/androidapp/download/"
+        }
+    }
+}
+
+dependencies {
+    //compile 'com.theartofdev.edmodo:android-image-cropper:2.4.+'
+
+    //google map AND //google cloud messaging
+
+    //compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    //compile project(':vertical-stepper-form')
+
+//    compile 'com.theartofdev.edmodo:android-image-cropper:2.4.+'
+
+    compile 'com.github.clans:fab:1.6.4'
+    //compile 'com.google.android.gms:play-services:9.0.1'
+
+    //https://developers.google.com/android/guides/setup
+//    compile 'com.google.android.gms:play-services-base:9.4.0'
+    compile 'com.google.android.gms:play-services-base:11.2.0'
+//    compile 'com.google.android.gms:play-services-appindexing:9.4.0'
+//    compile 'com.google.android.gms:play-services-appindexing:11.2.0'
+//    compile 'com.google.android.gms:play-services-gcm:9.4.0'
+    compile 'com.google.android.gms:play-services-gcm:11.2.0'
+
+//    compile 'com.google.android.gms:play-services-location:9.4.0'
+    compile 'com.google.android.gms:play-services-location:11.2.0'
+//    compile 'com.google.android.gms:play-services-maps:9.4.0'
+    compile 'com.google.android.gms:play-services-maps:11.2.0'
+//    compile 'com.google.android.gms:play-services-ads:9.4.0'
+    compile 'com.google.android.gms:play-services-ads:11.2.0'
+//    compile 'com.google.android.gms:play-services-analytics:9.4.0'
+    compile 'com.google.android.gms:play-services-analytics:11.2.0'
+    //badge
+    compile 'com.github.nekocode:Badge:1.6.2'
+    //Osmdroid
+
+    //Note as of 5.0, this is no longer needed!  compile 'org.slf4j:slf4j-simple:1.6.1'
+
+    //compile 'org.osmdroid:osmdroid-thirdparty:5.0.1@aar'
+
+    //compile 'org.osmdroid:osmdroid-android:5.1@aar'
+
+    //Osm Bonous Pack with usefull things
+
+    //compile 'com.github.MKergall.osmbonuspack:OSMBonusPack:v5.7'
+
+    //okhttp
+    compile 'com.squareup.okhttp:okhttp:2.7.0'
+    //Android bootstrap
+    compile 'com.beardedhen:androidbootstrap:2.1.0'
+    //font calligraphy
+    //compile 'uk.co.chrisjenx:calligraphy:2.1.0'
+    //persian Calendar
+
+    //compile 'com.mohamadamin:persianmaterialdatetimepicker:1.2.1'
+
+    //project (':AndroidBootstrap')
+
+    // Android Support Libs
+    compile 'com.android.support:support-v4:25.1.1'
+    //stepper
+
+    //compile 'com.stepstone.stepper:material-stepper:2.2.0'
+
+    //card View
+    compile 'com.github.brnunes:swipeablerecyclerview:1.0.2'
+    compile 'com.android.support:cardview-v7:25.1.1'
+    compile 'com.android.support:recyclerview-v7:25.1.1'
+    compile 'com.google.code.gson:gson:2.3'
+    //bottom navigation
+    compile 'com.android.support:appcompat-v7:25.1.1'
+    compile 'com.android.support:design:25.1.1'
+    //compile 'com.android.support:support-vector-drawable:25.1.1'
+
+    //compile 'com.android.support:animated-vector-drawable:25.1.1'
+
+    //compile 'com.roughike:bottom-bar:1.2.4'
+
+    // Dependency Injection
+    compile 'com.google.dagger:dagger:2.0'
+    // View Injection
+    compile 'com.jakewharton:butterknife:7.0.1'
+    // Logging
+    compile 'com.jakewharton.timber:timber:3.0.2'
+    //ShowcaseView
+
+    //compile 'com.github.amlcurran.showcaseview:library:5.4.3'
+
+    //compile 'com.github.wooplr:Spotlight:1.2.2'
+    compile 'com.actionbarsherlock:viewpagerindicator:2.4.1'
+    //compile 'com.nineoldandroids:library:2.4.0'
+
+    // Event Bus
+    compile 'com.squareup:otto:1.3.5'
+    // Image Loading
+
+    //compile 'com.squareup.picasso:picasso:2.5.2'
+
+    // HTTP
+    compile 'com.squareup.retrofit:retrofit:1.9.0'
+    // Fabric/Crashlytics
+    compile('com.crashlytics.sdk.android:crashlytics:2.5.5@aar') {
+        transitive = true
+    }
+
+    compile 'com.google.maps.android:android-maps-utils:0.5'
+
+    compile 'com.airbnb.android:lottie:1.5.3'
+
+    compile 'com.onesignal:OneSignal:[3.6.0, 3.99.99]'
+
+//    compile 'com.airbnb.android:lottie:2.3.1-SNAPSHOT'
+
+//    compile 'com.airbnb.android:lottie:2.3.0'
+
+    //androidTestCompile 'junit:junit:4.12'
+
+    //androidTestCompile 'com.android.support.test:runner:0.4'
+
+    // Set this dependency to use JUnit 4 rules
+
+    //androidTestCompile 'com.android.support.test:rules:0.4'
+
+    // Set this dependency to build and run Espresso tests
+
+    //androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2.1'
+
+    // Contrib
+
+    /*androidTestCompile('com.android.support.test.espresso:espresso-contrib:2.2.1') {
+            // http://stackoverflow.com/a/30931887/5210
+            exclude group: 'com.android.support', module: 'appcompat'
+            exclude group: 'com.android.support', module: 'support-v4'
+            exclude module: 'recyclerview-v7'
+        }*/
+
+    // Set this dependency to build and run UI Automator tests
+
+    //androidTestCompile 'com.android.support.test.uiautomator:uiautomator-v18:2.1.2'
+
+    //androidTestCompile 'org.mockito:mockito-core:1.9.5'
+
+    //androidTestCompile 'com.android.support:support-annotations:23.2.0'
+    apt 'com.google.dagger:dagger-compiler:2.0'
+    provided 'javax.annotation:jsr250-api:1.0'
+    compile 'de.hdodenhof:circleimageview:2.1.0'
+}
+apply plugin: 'com.google.gms.google-services'

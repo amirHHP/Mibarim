@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <color name="text">#FCFCFC</color>
+    <color name="login_text">#004d40</color>
+    <color name="text_light">#999999</color>
+    <color name="text_inverted">#FFFFFF</color>
+    <color name="text_hint">#484848</color>
+    <color name="text_title">#DFDFDF</color>
+    <color name="pager_footer">#1fb6ed</color>
+    <color name="pager_selected_text">#FFFFFF</color>
+    <color name="pager_background">#F4F4F4</color>
+    <color name="pager_background_alternate">#E7E7E7</color>
+    <color name="text_link">#1fb6ed</color>
+    <color name="table_text">#484848</color>
+    <color name="table_text_inverted">#FFFFFF</color>
+    <color name="table_text_light">#A6A6A6</color>
+    <color name="table_text_header">#636363</color>
+    <color name="header_background_start">#ECECEC</color>
+    <color name="header_background_end">#C3C3C3</color>
+    <color name="header_background_top">#F9F9F9</color>
+    <color name="header_background_bottom">#A7A7A7</color>
+    <color name="actionbar_background_start">#272727</color>
+    <color name="actionbar_background_end">#1A1A1A</color>
+    <color name="bootstrap_divider_top">#000000</color>
+    <color name="bootstrap_divider_bottom">#5A5A5A</color>
+    <color name="main_background_start">#2E2E2E</color>
+    <color name="main_background_end">#2C2C2C</color>
+    <color name="button_background_enabled_start">#1fb6ed</color>
+    <color name="button_background_enabled_end">#1c9ac8</color>
+    <color name="button_background_pressed_start">#f76500</color>
+    <color name="button_background_pressed_end">#fb812c</color>
+    <color name="edit_text_background_start">#EFF6FF</color>
+    <color name="edit_text_background_end">#FBFDFF</color>
+    <color name="button_background_disabled_start">#7b7b7b</color>
+    <color name="button_background_disabled_end">#646464</color>
+    <color name="text_shadow">#000000</color>
+
+    <color name="background_selected">#1fb6ed</color>
+    <color name="nav_button_text_light">#ffffff</color>
+    <color name="nav_button_pressed">#1fb6ed</color>
+    <color name="nav_button_disabled">#646464</color>
+    <color name="nav_button_text_disabled">#464646</color>
+
+    <color name="dark_grey">#1f1f1f</color>
+    <color name="navigation_drawer_item_separator">#c2c2c2</color>
+
+    <color name="darker_gray">#aaa</color>
+    <color name="form_field">#eeeeee</color>
+
+    <color name="week_time_on">#00bfa5</color>
+    <color name="week_time_text_on">#ffffff</color>
+    <color name="week_time_text_off">#111111</color>
+    <color name="transparent">#00000000</color>
+    <color name="transparenthalf">#78000000</color>
+    <color name="tab_text">#EEEEEE</color>
+    <color name="tab_text_act">#FFF</color>
+    <color name="search_box">#FFF</color>
+    <color name="text_white">#FFFFFF</color>
+    <color name="text_black">#111111</color>
+    <color name="validation_bg">#80cbc4</color>
+    <color name="dark_text">#004d40</color>
+    <color name="help_text">#ffffff</color>
+    <color name="help_slider">#fafafa</color>
+    <color name="splash_bc">#fafafa</color>
+    <color name="info_background">#ECECEC</color>
+    <color name="ride_background">#FFFFFF</color>
+    <color name="teal_light">#b2dfdb</color>
+    <color name="slide_1">#b8bdc0</color>
+    <color name="slide_2">#b8bdc0</color>
+    <color name="slide_3">#b8bdc0</color>
+
+    <color name="primary">#009688</color>
+    <color name="primary_dark">#00796B</color>
+    <color name="primary_light">#B2DFDB</color>
+    <color name="accent">#536DFE</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="secondary">#7C4DFF</color>
+    <color name="gold">#FFEB3B</color>
+    <color name="silver">#607D8B</color>
+    <color name="active_row">#FFEB3B</color>
+    <color name="active_trip">#8BC34A</color>
+    <color name="splash_back">#512da8</color>
+    <color name="icon_contact">#1176c6</color>
+    <color name="ms_material_blue_500">#7C4DFF</color>
+    <color name="ms_bottomNavigationBackgroundColor">#009688</color>
+    <color name="ms_bottomNavigationButtonTextColor">#FCFCFC</color>
+    <color name="scrl_back">#e9e9e9</color>
+    <color name="color_white">#FFFFFF</color>
+
+    <color name="my_yellow">#ffff00</color>
+    <color name="my_gray">#bcbcbc</color>
+
+    <color name="defining_route_origin_color">#00a421</color>
+    <color name="defining_route_destination_color">#bc001c</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="main_black">#000000</color>
+    <color name="charge_activity">#B2DFDB</color>
+
+    <color name="pressed_color">#4d90fe</color>
+    <color name="default_color">#ffffff</color>
+    <color name="add_amount_button_color">#005a96</color>
+
+    <color name="gray_background">#e6e6e6</color>
+
+</resources>

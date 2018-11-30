@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/search_box"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/search_txt"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_margin="10dp"
+        android:background="@drawable/border"
+        android:focusable="true"
+        android:gravity="start"
+        android:imeOptions="actionSearch"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:padding="10dp"
+        android:textSize="14dp" />
+
+    <FrameLayout
+        android:id="@+id/location_list"
+        android:name="com.mibarim.main.ui.fragments.addRouteFragments.LocationListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_txt" />
+
+
+</RelativeLayout>

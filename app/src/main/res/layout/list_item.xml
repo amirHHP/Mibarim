@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!--<ImageView
+        android:id="@+id/imageView"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginRight="16dp"
+        android:src="@drawable/aa_logo_blue"
+        android:visibility="gone" />-->
+
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_srcdst" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/source_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/imageView"
+                    android:gravity="center_vertical"
+                    android:text="temp"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/destination_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/imageView"
+                    android:gravity="center_vertical"
+                    android:text="temp"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/observe_trip"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="4dp"
+                android:background="#5abdff"
+                android:elevation="6dp"
+                android:gravity="center"
+                android:text="مشاهده سفر"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
+
+            <TextView
+                android:id="@+id/suggest_time"
+                android:layout_width="120dp"
+                android:layout_height="50dp"
+                android:background="#5abdff"
+                android:elevation="6dp"
+                android:gravity="center"
+                android:text="درخواست سفر"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/top_layout"
+        android:layout_margin="10dp"
+        android:background="@android:color/darker_gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_layout"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/minute_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="- - " />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=":" />
+
+            <TextView
+                android:id="@+id/hour_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" - -" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/delete_route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/ic_delete"
+            android:text="حذف مسیر" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

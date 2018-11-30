@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_white"
+    android:paddingEnd="24dp"
+    android:paddingStart="24dp">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:id="@+id/info_text"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="200dp">
+
+
+                <NumberPicker
+                    android:id="@+id/minute_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleX="2"
+                    android:scaleY="2" />
+
+                <LinearLayout
+                    android:id="@+id/minute_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/color_white"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/up_arrow" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/minute_down"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/color_white"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/down_arrow" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/two_dot"
+                android:textAppearance="?android:attr/textAppearanceLarge">
+
+            </TextView>
+
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="200dp"
+                android:layout_weight="1">
+
+                <NumberPicker
+                    android:id="@+id/hour_picker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:scaleX="2"
+                    android:scaleY="2" />
+
+
+                <LinearLayout
+                    android:id="@+id/hour_up"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/color_white"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/up_arrow" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hour_down"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/color_white"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/down_arrow" />
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ToggleButton
+                android:id="@+id/sat"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/roundedwhitebutton"
+                android:checked="false"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/week_time_text_off"
+                android:textOff="ش"
+                android:textOn="ش" />
+
+            <ToggleButton
+                android:id="@+id/sun"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/roundedwhitebutton"
+                android:checked="false"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/week_time_text_off"
+                android:textOff="ی"
+                android:textOn="ی" />
+
+            <ToggleButton
+                android:id="@+id/mon"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/roundedwhitebutton"
+                android:checked="false"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/week_time_text_off"
+                android:textOff="د"
+                android:textOn="د" />
+
+            <ToggleButton
+                android:id="@+id/tue"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/roundedwhitebutton"
+                android:checked="false"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/week_time_text_off"
+                android:textOff="س"
+                android:textOn="س" />
+
+            <ToggleButton
+                android:id="@+id/wed"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/roundedwhitebutton"
+                android:checked="false"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/week_time_text_off"
+                android:textOff="چ"
+                android:textOn="چ" />
+
+            <ToggleButton
+                android:id="@+id/thu"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/roundedwhitebutton"
+                android:checked="false"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/week_time_text_off"
+                android:textOff="پ"
+                android:textOn="پ" />
+
+            <ToggleButton
+                android:id="@+id/fri"
+                android:layout_width="30dp"
+                android:layout_height="38dp"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/roundedwhitebutton"
+                android:checked="false"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/week_time_text_off"
+                android:textOff="ج"
+                android:textOn="ج" />
+
+        </LinearLayout>
+
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/do_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/button_background_states"
+            android:elevation="5dp"
+            android:padding="12dp"
+            android:text="@string/label_register"
+            android:textColor="@color/text"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

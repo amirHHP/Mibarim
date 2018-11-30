@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:AwesomeTextView="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ListItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/user_image_layout"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
+                android:id="@+id/userimage"
+                android:layout_margin="5dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@mipmap/ic_camera"
+                app:bootstrapBrand="success" />
+
+            <!--<ImageView
+                android:id="@+id/silver"
+                android:layout_marginTop="-50dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_silver" />-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.beardedhen.androidbootstrap.AwesomeTextView
+                    android:id="@+id/fa_route_user_name"
+                    style="@style/wrapping_fa_text"
+                    app:bootstrapBrand="success"
+                    app:fontAwesomeIcon="fa_user" />
+
+                <TextView
+                    android:id="@+id/username"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/table_text_selector" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.beardedhen.androidbootstrap.AwesomeTextView
+                        android:id="@+id/fa_time"
+                        style="@style/wrapping_fa_text"
+                        app:bootstrapBrand="success"
+                        app:fontAwesomeIcon="fa_clock_o" />
+
+                    <TextView
+                        android:id="@+id/timing"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/table_text_selector" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.beardedhen.androidbootstrap.AwesomeTextView
+                            android:id="@+id/fa_price"
+                            style="@style/wrapping_fa_text"
+                            app:bootstrapBrand="success"
+                            app:fontAwesomeIcon="fa_money" />
+
+
+                        <TextView
+                            android:id="@+id/pricing"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/table_text_selector" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.beardedhen.androidbootstrap.AwesomeTextView
+                            android:id="@+id/fa_src_distance"
+                            style="@style/wrapping_fa_text"
+                            app:bootstrapBrand="success"
+                            app:fontAwesomeIcon="fa_send_o" />
+
+
+                        <TextView
+                            android:id="@+id/src_distance"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/table_text_selector" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.beardedhen.androidbootstrap.AwesomeTextView
+                            android:id="@+id/fa_car"
+                            style="@style/wrapping_fa_text"
+                            app:bootstrapBrand="success"
+                            app:fontAwesomeIcon="fa_cab" />
+
+                        <TextView
+                            android:id="@+id/carString"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/table_text_selector" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.beardedhen.androidbootstrap.AwesomeTextView
+                            android:id="@+id/fa_dst_distance"
+                            style="@style/wrapping_fa_text"
+                            app:bootstrapBrand="success"
+                            app:fontAwesomeIcon="fa_send" />
+
+                        <TextView
+                            android:id="@+id/dst_distance"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/table_text_selector" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_avatar"-->
+    <!--style="@style/AvatarLarge"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentTop="true"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:contentDescription="@string/avatar" />-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_name"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+    <!--android:textColor="@color/table_text_selector" />-->
+
+</LinearLayout>

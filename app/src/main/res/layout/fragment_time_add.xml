@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:id="@+id/scrollView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/desc_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:padding="15dp"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+
+
+                <LinearLayout
+                    android:id="@+id/home_work_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <com.beardedhen.androidbootstrap.AwesomeTextView
+                        android:id="@+id/fa_src_time"
+                        style="@style/wrapping_fa_text"
+                        app:bootstrapBrand="success"
+                        app:fontAwesomeIcon="fa_clock_o" />
+
+
+                    <EditText
+                        android:id="@+id/home_work_time"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:text="@string/home_work_time"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="start"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/return_checkBox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/return_cb_label"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/isReturn"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/work_home_layout"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="15dp"
+                    android:orientation="horizontal">
+
+                    <com.beardedhen.androidbootstrap.AwesomeTextView
+                        android:id="@+id/fa_dst_time"
+                        style="@style/wrapping_fa_text"
+                        app:bootstrapBrand="success"
+                        app:fontAwesomeIcon="fa_clock_o" />
+
+
+                    <EditText
+                        android:id="@+id/work_home_time"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:text="@string/work_home_time"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ToggleButton
+                        android:id="@+id/sat"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/week_time_text_off"
+                        android:textOff="ش"
+                        android:textOn="ش" />
+
+                    <ToggleButton
+                        android:id="@+id/sun"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/week_time_text_off"
+                        android:textOff="ی"
+                        android:textOn="ی" />
+
+                    <ToggleButton
+                        android:id="@+id/mon"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/week_time_text_off"
+                        android:textOff="د"
+                        android:textOn="د" />
+
+                    <ToggleButton
+                        android:id="@+id/tue"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/week_time_text_off"
+                        android:textOff="س"
+                        android:textOn="س" />
+
+                    <ToggleButton
+                        android:id="@+id/wed"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/week_time_text_off"
+                        android:textOff="چ"
+                        android:textOn="چ" />
+
+                    <ToggleButton
+                        android:id="@+id/thu"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/week_time_text_off"
+                        android:textOff="پ"
+                        android:textOn="پ" />
+
+                    <ToggleButton
+                        android:id="@+id/fri"
+                        android:layout_width="30dp"
+                        android:layout_height="40dp"
+                        android:layout_margin="5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/border"
+                        android:checked="false"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/week_time_text_off"
+                        android:textOff="ج"
+                        android:textOn="ج" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:orientation="horizontal">
+
+
+                    <CheckBox
+                        android:id="@+id/weekly_chk_bx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <TextView
+                        android:id="@+id/weekly_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:text="@string/week_repeat"
+                        android:textAppearance="?android:attr/textAppearanceSmall" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/do_done_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="#26a69a"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:padding="7dp"
+        android:text="@string/set_work_home"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+</RelativeLayout>

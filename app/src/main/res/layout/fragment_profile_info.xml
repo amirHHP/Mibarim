@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:orientation="vertical">
+
+        <include layout="@layout/toolbar"></include>
+
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/text">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="32dp"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/name_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/border_comment"
+                            android:text="سینا صبوحی"
+                            android:textColor="@color/text"
+                            android:textSize="24sp" />
+
+
+                        <TextView
+                            android:id="@+id/age_profile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/border_comment"
+                            android:text="age"
+                            android:textColor="@color/text" />
+
+                        <TextView
+                            android:id="@+id/about_me"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:background="@drawable/border_comment"
+                            android:text="@string/about_me"
+                            android:textColor="@color/text" />
+
+                        <RatingBar
+                            android:id="@+id/rating"
+                            style="?android:attr/ratingBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="16dp"
+                            android:layout_marginTop="16dp"
+                            android:isIndicator="true"
+                            android:numStars="5"
+                            android:stepSize="0.1" />
+
+                        <TextView
+                            android:id="@+id/user_rate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="14 امتیاز"
+                            android:textColor="@color/text" />
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/picture_profile"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="48dp"
+                        android:background="@drawable/circle_border"
+                        android:scaleType="center"
+                        android:src="@drawable/camera" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="16dp"
+                    android:background="@color/text"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:id="@+id/map_fragment"
+                        android:name="com.mibarim.main.ui.fragments.MapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_weight="2"
+                        tools:layout="@layout/fragment_map" />
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="right"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:id="@+id/textView15"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="16dp"
+                                android:gravity="center"
+                                android:text="شهرآرا"
+                                android:textColor="@color/text_black"
+                                android:textSize="22sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="16dp"
+                                android:gravity="center"
+                                android:text="شمشیری"
+                                android:textColor="@color/text_black"
+                                android:textSize="22sp" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="16dp"
+                                android:gravity="center"
+                                android:text="شروع"
+                                android:textColor="@color/text_black"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="16dp"
+                                android:gravity="center"
+                                android:text="پایان"
+                                android:textColor="@color/text_black"
+                                android:textSize="20sp" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:text="@string/wait"
+                            android:textColor="@color/text_black" />
+
+                        <TextView
+                            android:id="@+id/textView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:text=" 6 : 30 "
+                            android:textColor="@color/text_black"
+                            android:textSize="18sp" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/divider" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+
+                        <ToggleButton
+                            android:id="@+id/sat"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/roundedwhitebutton"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/week_time_text_off"
+                            android:textOff="ش"
+                            android:textOn="ش" />
+
+                        <ToggleButton
+                            android:id="@+id/sun"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/roundedwhitebutton"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/week_time_text_off"
+                            android:textOff="ی"
+                            android:textOn="ی" />
+
+                        <ToggleButton
+                            android:id="@+id/mon"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/roundedwhitebutton"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/week_time_text_off"
+                            android:textOff="د"
+                            android:textOn="د" />
+
+                        <ToggleButton
+                            android:id="@+id/tue"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/roundedwhitebutton"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/week_time_text_off"
+                            android:textOff="س"
+                            android:textOn="س" />
+
+                        <ToggleButton
+                            android:id="@+id/wed"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/roundedwhitebutton"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/week_time_text_off"
+                            android:textOff="چ"
+                            android:textOn="چ" />
+
+                        <ToggleButton
+                            android:id="@+id/thu"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/roundedwhitebutton"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/week_time_text_off"
+                            android:textOff="پ"
+                            android:textOn="پ" />
+
+                        <ToggleButton
+                            android:id="@+id/fri"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="4dp"
+                            android:background="@drawable/roundedwhitebutton"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/week_time_text_off"
+                            android:textOff="ج"
+                            android:textOn="ج" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginBottom="16dp"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/divider" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:layout_margin="16dp"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ToggleButton
+                            android:id="@+id/sat2"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/roundedwhitebutton"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/week_time_text_off" />
+
+                        <TextView
+                            android:id="@+id/textView6"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/border_comment"
+                            android:gravity="center"
+                            android:text="@string/name"
+                            android:textColor="@color/text_black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ToggleButton
+                            android:id="@+id/sat3"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/roundedwhitebutton"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/week_time_text_off"
+                            android:textOff="50"
+                            android:textOn="50" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/border_comment"
+                            android:gravity="center"
+                            android:text="رضایت"
+                            android:textColor="@color/text_black" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="2dp"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ToggleButton
+                            android:id="@+id/sat1"
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_margin="5dp"
+                            android:background="@drawable/roundedwhitebutton"
+                            android:checked="false"
+                            android:gravity="center"
+                            android:textAlignment="center"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="@color/week_time_text_off" />
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/border_comment"
+                            android:gravity="center"
+                            android:text="سفر"
+                            android:textColor="@color/text_black" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/divider" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/text"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/roundedblackbutton"
+                        android:scaleType="center" />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:gravity="right"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView18"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:text="پراید"
+                            android:textColor="@color/text_black" />
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:text="نوک مدادی رنگ"
+                            android:textColor="@color/text_black" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="16dp"
+                            android:text="3 صندلی خالی"
+                            android:textColor="@color/text_black" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <!--<LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/border_revers"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="16dp"
+                        android:background="@drawable/border_comment"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="8dp"
+                            android:gravity="center"
+                            android:text="حامد لشگری"
+                            android:textColor="@color/text_black" />
+
+
+
+                        <ImageView
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="16dp"
+                            android:background="@drawable/circle_border"
+                            android:scaleType="center" />
+
+
+                   </LinearLayout>
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="16dp"
+                        android:background="@color/accent"
+                        android:gravity="center"
+                        android:text="نظرات بیشتر"
+                        android:textColor="@color/text" />
+
+                </LinearLayout>
+
+        -->
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/border_comment"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.AppCompatButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:background="@color/accent"
+                android:text="درخواست سفر"
+                android:textColor="@color/text" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

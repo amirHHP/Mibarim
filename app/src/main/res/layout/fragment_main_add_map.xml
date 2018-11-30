@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/map_fragment"
+        android:name="com.mibarim.main.ui.fragments.MapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_map" />
+
+    <FrameLayout
+        android:id="@+id/address_flag_fragment"
+        android:name="com.mibarim.main.ui.fragments.addRouteFragments.AddressFlagFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_address_flag" />
+
+
+    <FrameLayout
+        android:id="@+id/route_src_dst_fragment"
+        android:name="com.mibarim.main.ui.fragments.addRouteFragments.SrcDstFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_src_dst" />
+
+
+    <!--<FrameLayout
+        android:id="@+id/newRoute_dst_fragment"
+        android:name="com.mibarim.main.ui.fragments.DstFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_dst" />-->
+
+    <!--<FrameLayout
+        android:id="@+id/event_list_fragment"
+        android:name="com.mibarim.main.ui.fragments.addRouteFragments.RouteListFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />-->
+
+<!--
+    <FrameLayout
+        android:id="@+id/info_submit_fragment"
+        android:name="com.mibarim.main.ui.fragments.InfoMessageFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_info_message"/>
+-->
+
+
+</RelativeLayout>

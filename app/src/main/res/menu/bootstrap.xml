@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/newRoute"
+        android:showAsAction="always"
+        android:title="@string/title_new_route">
+    </item>
+
+    <item
+        android:id="@+id/myRoutes"
+        android:showAsAction="always"
+        android:title="@string/my_routes" >
+    </item>
+
+    <item
+        android:id="@+id/userInfo"
+        android:showAsAction="always"
+        android:title="@string/user_info" >
+    </item>
+
+    <item
+        android:id="@+id/help"
+        android:showAsAction="always"
+        android:title="@string/help" >
+    </item>
+
+    <item
+        android:id="@+id/rules"
+        android:showAsAction="always"
+        android:title="@string/rules" >
+    </item>
+
+    <item
+        android:id="@+id/contactUs"
+        android:showAsAction="always"
+        android:title="@string/feed_back" >
+    </item>
+
+    <item
+        android:id="@+id/logout"
+        android:showAsAction="never"
+        android:title="@string/logout_action" >
+    </item>
+
+
+</menu>

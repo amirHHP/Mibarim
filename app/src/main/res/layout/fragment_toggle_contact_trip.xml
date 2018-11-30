@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    android:elevation="5dp">
+
+    <RelativeLayout
+        android:id="@+id/switch_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:animateLayoutChanges="true"
+
+        android:background="@color/primary_light">
+
+        <LinearLayout
+            android:id="@+id/wrap_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:id="@+id/switchLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <Switch
+                    android:id="@+id/switch_for_trip_state"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/primary_light"
+                    android:checked="false"
+                    android:textOff="@string/trip_off"
+                    android:textOn="@string/trip_on" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/switch_text_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/switch_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/trip_state" />
+
+                <com.beardedhen.androidbootstrap.AwesomeTextView
+                    android:id="@+id/help"
+                    style="@style/wrapping_fa_text_fix"
+                    android:gravity="center"
+                    android:minHeight="45dp"
+                    android:minWidth="45dp"
+                    app:bootstrapBrand="secondary"
+                    app:fontAwesomeIcon="fa_question_circle" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

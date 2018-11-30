@@ -1,0 +1,34 @@
+<?xml version="10.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:AwesomeTextView="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/ListItem"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/location_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/table_text_selector" />
+
+        <com.beardedhen.androidbootstrap.AwesomeTextView
+            android:id="@+id/fa_name"
+            style="@style/wrapping_fa_text"
+            android:layout_width="fill_parent"
+            android:layout_weight="8"
+            app:bootstrapBrand="success"
+            app:fontAwesomeIcon="fa_map_marker" />
+    </LinearLayout>
+
+</LinearLayout>

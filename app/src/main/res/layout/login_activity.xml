@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_background">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="24dp"
+            android:paddingRight="24dp"
+            android:paddingTop="56dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="72dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="24dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:contentDescription="Logo"
+                android:src="@drawable/logo_full" />
+            <!-- Email Label -->
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:textColorHint="@color/login_text">
+
+                <AutoCompleteTextView
+                    android:id="@+id/et_mobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:hint="@string/label_mobile"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:nextFocusUp="@+id/et_mobile"
+                    android:nextFocusDown="@+id/et_password"
+                    android:textColor="@color/login_text" />
+            </android.support.design.widget.TextInputLayout>
+
+            <!-- Password Label -->
+<!--            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:textColorHint="@color/login_text">
+
+                <EditText
+                    android:id="@+id/et_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/label_password"
+                    android:imeOptions="actionDone"
+                    android:inputType="textPassword"
+                    android:password="true"
+                    android:textColor="@color/login_text" />
+            </android.support.design.widget.TextInputLayout>-->
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/b_signin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="24dp"
+                android:clickable="true"
+                android:background="@drawable/button_background_states"
+                android:padding="12dp"
+                android:text="@string/label_login"
+                android:textColor="@color/text"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/link_signup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:onClick="gotoRegister"
+                android:text="@string/newUserRegister"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/login_text" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout><!--
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/main_background"
+android:orientation="vertical">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.3"
+    android:background="#00695c">
+
+    <ImageView
+        android:id="@+id/logoImage"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:contentDescription="Logo"
+        android:src="@drawable/logo_white" />
+</RelativeLayout>
+
+<TextView
+    android:id="@+id/tv_signup"
+    style="@style/ShadowText"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/stripe_repeat"
+    android:gravity="center"
+    android:padding="5dp"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:textColor="@color/text"
+    android:textColorLink="@color/text_link" />
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                style="@style/ShadowText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="@string/label_mobile"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/text" />
+
+            <AutoCompleteTextView
+                android:id="@+id/et_mobile"
+                style="@style/SignInEditText"
+                android:completionThreshold="1"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:nextFocusDown="@+id/et_password" />
+
+            <TextView
+                style="@style/ShadowText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:paddingBottom="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:paddingTop="10dp"
+                android:text="@string/label_password"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/text" />
+
+            <EditText
+                android:id="@+id/et_password"
+                style="@style/SignInEditText"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:password="true" />
+
+            <Button
+                android:id="@+id/b_signin"
+                style="@style/ShadowText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/button_background_states"
+                android:gravity="center"
+                android:onClick="handleLogin"
+                android:padding="10dp"
+                android:text="@string/label_login"
+                android:textColor="@color/text"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="60dp"
+            android:background="#80cbc4"
+            android:clickable="true"
+            android:onClick="gotoRegister"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/newUserRegister"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#111111" />
+    </LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>-->

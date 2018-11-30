@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp">
+    <!--
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="30dp"
+            android:layout_weight="2"
+            android:progressDrawable="@drawable/circular_progress_bar" />-->
+
+    <LinearLayout
+        android:id="@+id/paeen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="2"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+
+
+            <Button
+                android:layout_gravity="center"
+                android:text="از دوربین"
+                android:id="@+id/camera_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:drawableTop="@drawable/ic_camera_alt_black_24dp"
+                android:textColor="#F0AAAAAA" />
+
+            <View
+                android:layout_marginBottom="5dp"
+                android:layout_width="1dp"
+                android:layout_height="100dp"
+                android:background="@android:color/darker_gray" />
+
+
+            <Button
+                android:layout_gravity="center"
+                android:textColor="#F0AAAAAA"
+                android:text="از گالری"
+                android:id="@+id/gallery_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:background="#00000000"
+                android:drawableTop="@drawable/ic_insert_photo_black_24dp" />
+
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/continue_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="bottom"
+            android:layout_margin="3dp"
+            android:background="@drawable/button_background_states"
+            android:elevation="5dp"
+            android:padding="12dp"
+            android:text="ادامه"
+            android:textAlignment="center"
+            android:textColor="@color/text"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/paeen"
+        android:orientation="vertical">
+
+        <com.beardedhen.androidbootstrap.BootstrapCircleThumbnail
+            android:id="@+id/image_to_upload"
+            android:layout_width="170dp"
+            android:layout_height="170dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_weight="4"
+            android:src="@drawable/blank_picture" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_weight="3"
+            android:gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="0dp"
+                android:id="@+id/text_first"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="بارگذاری عکس الزامی است. \n عکس باید تمام رخ باشد.\nعکس شما فقط به همسفران نمایش داده خواهد شد و توسط سایر کاربران قابل مشاهده نیست."
+                android:textAlignment="center"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <!--
+
+        <View
+            android:layout_centerInParent="true"
+            android:layout_width="1dp"
+            android:layout_height="250dp"
+            android:background="@android:color/darker_gray" />
+    -->
+
+
+
+</RelativeLayout>

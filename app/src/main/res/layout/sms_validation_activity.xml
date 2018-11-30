@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sms_validation_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:paddingTop="5dp">
+
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center"
+            android:contentDescription="Image"
+            android:padding="1dp"
+            android:src="@drawable/logo_full" />
+
+        <TextView
+            android:id="@+id/mobile_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:padding="10dp"
+            android:text="شماره"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/login_text" />
+
+
+        <EditText
+            android:id="@+id/validationCode"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:hint="@string/enterValidationCode"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/zero"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/login_text" />
+
+        <TextView
+            android:id="@+id/sms_resend"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/resend_sms"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/login_text" />
+
+        <TextView
+            android:id="@+id/voice_send"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/voice_send"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/login_text" />
+
+
+        <TextView
+            android:id="@+id/link_login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/not_login"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/login_text" />
+
+        <TextView
+            android:id="@+id/wrong_number"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="@string/wrong_number"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/login_text" />
+
+        <TextView
+            android:id="@+id/mobile_confirm_btn"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/button_background_states"
+            android:clickable="true"
+            android:gravity="center"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:text="تایید"
+            android:textAlignment="center"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/help_text" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

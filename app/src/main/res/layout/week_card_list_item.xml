@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <!-- A CardView that contains a TextView -->
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        card_view:cardCornerRadius="4dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:orientation="vertical"
+            android:paddingEnd="16dp"
+            android:paddingStart="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="8dp"
+                android:paddingTop="24dp">
+
+                <LinearLayout
+                    android:id="@+id/suggest_lay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/sent_suggests"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:paddingEnd="8dp"
+                        android:paddingStart="8dp"
+                        android:textSize="24sp" />
+
+                    <!--<TextView
+                        android:id="@+id/fa_cab"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/driver"
+                        android:paddingEnd="8dp"
+                        android:paddingStart="8dp"
+                        android:textSize="24sp" />
+
+                    <TextView
+                        android:id="@+id/fa_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/passenger"
+                        android:paddingEnd="8dp"
+                        android:paddingStart="8dp"
+                        android:textSize="24sp" />-->
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+
+                    <com.beardedhen.androidbootstrap.AwesomeTextView
+                        android:id="@+id/fa_time"
+                        style="@style/wrapping_fa_text"
+                        app:fontAwesomeIcon="fa_clock_o" />
+
+                    <TextView
+                        android:id="@+id/timing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"/>
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/src_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textColor="@color/table_text_selector"
+                    android:textSize="14sp" />
+
+                <View
+                    android:layout_width="10dp"
+                    android:layout_height="1dp"
+                    android:layout_gravity="center"
+                    android:background="@android:color/darker_gray"
+                    android:padding="8dp"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/dst_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:textColor="@color/table_text_selector"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="start"
+                android:paddingBottom="8dp"
+                android:paddingTop="8dp">
+
+                <TextView
+                    android:id="@+id/sat"
+                    android:layout_width="30dp"
+                    android:layout_height="38dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundedwhitebutton"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/week_time_text_off"
+                    android:text="ش" />
+
+                <TextView
+                    android:id="@+id/sun"
+                    android:layout_width="30dp"
+                    android:layout_height="38dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundedwhitebutton"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/week_time_text_off"
+                    android:text="ی" />
+
+                <TextView
+                    android:id="@+id/mon"
+                    android:layout_width="30dp"
+                    android:layout_height="38dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundedwhitebutton"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/week_time_text_off"
+                    android:text="د" />
+
+                <TextView
+                    android:id="@+id/tue"
+                    android:layout_width="30dp"
+                    android:layout_height="38dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundedwhitebutton"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/week_time_text_off"
+                    android:text="س" />
+
+                <TextView
+                    android:id="@+id/wed"
+                    android:layout_width="30dp"
+                    android:layout_height="38dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundedwhitebutton"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/week_time_text_off"
+                    android:text="چ" />
+
+                <TextView
+                    android:id="@+id/thu"
+                    android:layout_width="30dp"
+                    android:layout_height="38dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundedwhitebutton"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/week_time_text_off"
+                    android:text="پ" />
+
+                <TextView
+                    android:id="@+id/fri"
+                    android:layout_width="30dp"
+                    android:layout_height="38dp"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/roundedwhitebutton"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/week_time_text_off"
+                    android:text="ج" />
+
+            </LinearLayout>
+
+
+            <View
+                android:id="@+id/divider"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="16dp"
+                android:paddingTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/pricing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/delete_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingEnd="16dp"
+                        android:paddingStart="16dp">
+
+                        <com.beardedhen.androidbootstrap.AwesomeTextView
+                            android:id="@+id/fa_trash"
+                            style="@style/wrapping_fa_text"
+                            app:bootstrapBrand="danger"
+                            app:fontAwesomeIcon="fa_trash" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/share_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:paddingEnd="16dp"
+                        android:paddingStart="16dp">
+
+
+                        <com.beardedhen.androidbootstrap.AwesomeTextView
+                            android:id="@+id/fa_share"
+                            style="@style/wrapping_fa_text"
+                            app:bootstrapBrand="info"
+                            app:fontAwesomeIcon="fa_share_alt" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</LinearLayout>

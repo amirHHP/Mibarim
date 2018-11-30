@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="200dp">
+
+
+            <NumberPicker
+                android:id="@+id/hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:descendantFocusability="blocksDescendants"
+                android:scaleX="2"
+                android:scaleY="2" />
+
+            <LinearLayout
+                android:id="@+id/add_to_hours"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/up_arrow" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reduce_from_hours"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/down_arrow" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ImageView
+            android:src="@drawable/colon_for_timepicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:layout_width="120dp"
+            android:layout_height="200dp">
+
+
+            <NumberPicker
+                android:id="@+id/minute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:descendantFocusability="blocksDescendants"
+                android:scaleX="2"
+                android:scaleY="2" />
+
+            <LinearLayout
+                android:id="@+id/add_to_minutes"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/up_arrow" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/reduce_from_minutes"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/down_arrow" />
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/state_of_the_day"
+        android:textColor="#000"
+        android:layout_gravity="center"
+        android:text="صبح"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

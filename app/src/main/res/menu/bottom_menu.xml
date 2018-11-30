@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/profile_item"
+        android:icon="@drawable/ic_user"
+        android:title="@string/title_profile" />
+    <item
+        android:id="@+id/messages_item"
+        android:icon="@drawable/ic_msg"
+        android:title="@string/title_messages" />
+
+    <item
+        android:id="@+id/map_item"
+        android:icon="@drawable/geo_fence"
+        android:title="@string/title_map"
+
+        />
+
+    <!--<item
+        android:id="@+id/event_item"
+        android:icon="@drawable/ic_event"
+        android:title="@string/title_events" />-->
+
+    <item
+        android:id="@+id/routes_item"
+        android:icon="@drawable/ic_route"
+        android:title="@string/title_routes" />
+</menu>

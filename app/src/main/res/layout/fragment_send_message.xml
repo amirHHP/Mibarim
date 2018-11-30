@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/relSendMessage"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:animateLayoutChanges="true"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray" />
+
+
+            <LinearLayout
+                android:id="@+id/wrap_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:id="@+id/sendButtonLayout"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_alignParentStart="true"
+                    android:orientation="vertical">
+
+                    <com.beardedhen.androidbootstrap.AwesomeTextView
+                        android:id="@+id/sendButton"
+                        style="@style/wrapping_fa_text"
+
+                        android:background="@drawable/roundedbutton"
+                        android:gravity="center"
+                        android:minHeight="45dp"
+                        android:minWidth="45dp"
+                        app:bootstrapBrand="warning"
+                        app:fontAwesomeIcon="fa_send" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/messageBodyField"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="-4dp"
+                    android:layout_toEndOf="@+id/sendButtonLayout"
+                    android:background="@android:color/white"
+                    android:hint="@string/message"
+                    android:inputType="textCapSentences|textMultiLine"
+                    android:maxLines="3"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

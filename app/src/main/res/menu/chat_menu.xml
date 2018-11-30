@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_user"
+        android:icon="@drawable/ic_user"
+        android:orderInCategory="300"
+        android:title="@string/user"
+        app:showAsAction="ifRoom">
+
+    </item>
+    <item
+        android:id="@+id/action_similar_route"
+        android:icon="@drawable/ic_route"
+        android:orderInCategory="200"
+        android:title="@string/similar_route"
+        app:showAsAction="always">
+
+    </item>
+</menu>
