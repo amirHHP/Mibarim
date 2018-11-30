@@ -1,5 +1,7 @@
 # Release Notes
 
+Mibarim developeted by Hamed lashkari (Head), Aria zad ebrahimi, Mohammad hossein khojaste.
+
 ### 2015-10-15
 
 * All fragments have been updated to support lib fragments.
